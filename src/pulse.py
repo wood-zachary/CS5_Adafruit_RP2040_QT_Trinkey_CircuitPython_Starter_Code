@@ -12,8 +12,8 @@ def pulse(pixels: NeoPixel, color: tuple[int, int, int], duration: float) -> Non
     Fills pixels with a color for a duration, then turns them off.
 
     Args:
-        pixels (): LED controller object.
-        color (tuple): Color to displray.
+        pixels (NeoPixel): LED controller object.
+        color (tuple): Color to display.
         duration (float): time in seconds to keep the color on/off.
     """
     # Your Code Here!

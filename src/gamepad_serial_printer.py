@@ -5,6 +5,14 @@ from support.mytyping import NoReturn
 LOOP_DELAY = 0.2
 
 def run_gamepad_serial_printer(gamepad: MiniGamepad) -> NoReturn:
+    """
+    Read the MiniGamepad joystick and buttons once every LOOP_DELAY seconds and print:
+        joystick: x, y
+        buttons: A, B, X, Y, Select, Start
+    
+    Args:
+        gamepad: MiniGamepad (seesaw wrapper)
+    """
     while True:
         x = gamepad.x
         y = gamepad.y
