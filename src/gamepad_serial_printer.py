@@ -24,7 +24,7 @@ def run_gamepad_serial_printer(gamepad: MiniGamepad) -> NoReturn:
         start = gamepad.button_start
         select = gamepad.button_select
 
-        print(f"Joystic: X - {x} \tY - {y}")
+        print(f"Joystick: X - {x} \tY - {y}")
 
         buttons = "Buttons:"
         if a:
