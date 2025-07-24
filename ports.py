@@ -10,8 +10,6 @@ finally:
     import serial
     import serial.tools
 
-import time
-
 import serial.tools.list_ports
 import serial.tools.miniterm
 
@@ -21,11 +19,10 @@ CTRL_C_SUB = bytes(0x7F)
 
 
 def get_trinkey_port():
-
     ports = serial.tools.list_ports.comports()
     for port, desc, hwid in sorted(ports):
         if 'Trinkey' in desc or '239A' in desc.upper() or '239A' in hwid.upper():
-            s = serial.Serial(port, baudrate=1152000)
+            s = serial.Serial(port, baudrate=115200)
             return s
     return None
 
